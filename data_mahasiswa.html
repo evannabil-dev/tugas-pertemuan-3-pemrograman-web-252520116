@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Mahasiswa</title>
+
+    <!-- CSS -->
+    <style>
+        /* jenis huruf dan warna latar */
+        body {background: #f4f8ff;
+            color: #333;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 15px;}
+
+        /* Judul halaman */
+        h1 {color: #1a56b0;
+            text-align: center;}
+
+        /* Sub judul */
+        h2 {color: #1a56b0;
+            border-bottom: 2px solid #1a56b0;
+            padding-bottom: 4px;}
+
+        /* Kotak form */
+        form {background: white;
+            border: 1px solid #ccd;
+            padding: 15px;
+            line-height: 2;}
+
+        /* Kolom isian */
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {padding: 5px;
+            border: 1px solid #ccc;}
+
+        /* Tombol */
+        button {background: #1a56b0;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            margin-top: 8px;
+            cursor: pointer;}
+
+        /* Tabel */
+        table {border-collapse: collapse;
+            width: 100%;
+            background: white;}
+
+        /* Header Tabel */
+        th {background: #1a56b0;
+            color: white;
+            padding: 8px;}
+
+        /* Garis Tabel */
+        td {border: 1px solid #ccd;
+            padding: 8px;}
+
+        /* menebalkan dan mengatur warna pada bagian rata-rata ipk */
+        .aktif {background: #e6eefb;
+            font-weight: bold;}
+
+        /* rata tengah untuk kolom ipk */
+        .tengah {text-align: center;}
+
+    </style>
+</head>
+
+<body>
+
+    <!-- JUDUL HALAMAN -->
+    <h1>Data Mahasiswa</h1>
+
+    <!-- FORM -->
+    <form action="proses.php" method="post">
+
+        <!-- Input nama -->
+        Nama: <input type="text" name="nama"><br>
+
+        <!-- Input email -->
+        Email: <input type="email" name="email"><br>
+
+        <!-- input jenis kelamin menggunakan Radio button -->
+        Jenis Kelamin:
+        <input type="radio" name="jk" value="L"> Laki-laki
+        <input type="radio" name="jk" value="P"> Perempuan<br>
+
+        <!-- Checkbox  -->
+        Hobi:
+        <input type="checkbox" name="hobi" value="baca"> Membaca
+        <input type="checkbox" name="hobi" value="gambar"> Menggambar
+        <input type="checkbox" name="hobi" value="olahraga"> Olahraga
+        <input type="checkbox" name="hobi" value="nulis"> Menulis <br>
+
+        <!-- input prodi menggunakan Select / dropdown -->
+        Prodi:
+        <select name="prodi">
+            <option>Teknologi Informasi</option>
+            <option>Teknik sipil</option>
+            <option>PTO</option>
+        </select><br>
+
+        <!-- input alamat -->
+        Alamat:<br>
+        <textarea name="alamat" rows="3" cols="40"></textarea><br>
+
+        <!-- Tombol submit dan reset -->
+        <button type="submit">Kirim</button>
+        <button type="reset">Reset</button>
+    </form>
+
+    <!--  TABEL 5 Mahasiswa  -->
+    <h2>Daftar Mahasiswa</h2>
+    <table>
+        <caption>Data 5 Mahasiswa</caption>
+
+        <!-- Judul kolom -->
+        <thead>
+            <tr>
+                <th>NIM</th>
+                <th>Nama</th>
+                <th>Prodi</th>
+                <th>IPK</th>
+            </tr>
+        </thead>
+
+        <!-- Data mahasiswa -->
+        <tbody>
+            <tr>
+                <td>252524320</td>
+                <td>Budi Siregar</td>
+                <td>Teknologi Informasi</td>
+                <td class="tengah">3.76</td>
+            </tr>
+            <tr>
+                <td>252170032</td>
+                <td>Bambang</td>
+                <td>PTO</td>
+                <td class="tengah">3.56</td>
+            </tr>
+            <tr>
+                <td>252520087</td>
+                <td>Fuad Ngawi</td>
+                <td>Teknologi Informasi</td>
+                <td class="tengah">3.14</td>
+            </tr>
+            <tr>
+                <td>252510890</td>
+                <td>Hodijah</td>
+                <td>Teknik sipil</td>
+                <td class="tengah">3.85</td>
+            </tr>
+            <tr>
+                <td>252510023</td>
+                <td>Imam Oky Boy</td>
+                <td>Teknik sipil</td>
+                <td class="tengah">2.74</td>
+            </tr>
+        </tbody>
+
+        <!-- Baris rata-rata menggunakan colspan untuk menggabungkan kolom -->
+        <tfoot>
+            <tr class="aktif">
+                <td colspan="3">Rata-rata IPK</td>
+                <td class="tengah">3.41</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>

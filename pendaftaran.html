@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Peserta</title>
+    <style>
+        body {font-family: Arial;  
+        background: #f4f8ff;
+        margin: 30px;}
+        
+        h1 { color: #1a56b0;
+            text-align: center;}
+
+        form {background: #ffffff;
+            border: 1px solid #ccd;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto 30px auto;}
+
+        table {border-collapse: collapse;
+            width: 100%;
+            max-width: 650px;
+            margin: 0 auto;background: #ffffff;}
+
+        th { background: #1a56b0;
+            color: white;
+            padding: 8px; text-align: left;}
+        td { border: 1px solid #ccd; padding: 8px; }
+
+        .aktif {background: #e6eefb;}
+
+        button {background-color: #1a56b0;
+            color: white;
+            border: none;
+            padding: 6px 15px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;}
+    </style>
+</head>
+<body>
+
+    <h1>Pendaftaran Peserta</h1>
+
+    <form action="proses.php" method="post">
+        Nama: <input type="text" name="nama"><br><br>
+        
+        Jenis Kelamin:
+        <input type="radio" name="jk" value="L" checked> L 
+        <input type="radio" name="jk" value="P"> P<br><br>
+        
+        Jurusan:
+        <select name="jurusan">
+            <option selected>Informatika</option>
+            <option>Sistem Informasi</option>
+        </select><br><br>
+
+        <button type="submit">Kirim</button>
+    </form>
+
+    <table>
+        <tr>
+            <th style="width: 15%;">No</th>
+            <th style="width: 45%;">Nama</th>
+            <th style="width: 40%;">Jurusan</th>
+        </tr>
+        <tr class="aktif">
+            <td>1</td>
+            <td>Budi Santoso</td>
+            <td>Informatika</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Sari Wulandari</td>
+            <td>Sistem Informasi</td>
+        </tr>
+    </table>
+
+</body>
+</html>
